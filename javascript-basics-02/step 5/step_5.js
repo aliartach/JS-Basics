@@ -6,21 +6,14 @@ let images = [
     document.querySelector("#image5")
 ];
 
+
 function changeImage(event) {
     let imageElement = event.target;
     let imageName = imageElement.id;
-    
+
     imageElement.src = `/javascript-basics-02/step 5/images/${imageName}_2.jpg`;
-}
-
-function restoreImage(event) {
-    let imageElement = event.target;
-    let imageName = imageElement.id;
-
-    imageElement.src = `/javascript-basics-02/step 5/images/${imageName}.jpg`;
 }
 
 for (let i = 0; i < images.length; i++) {
     images[i].addEventListener("mouseover", changeImage);
-    images[i].addEventListener("mouseout", restoreImage);
 }
